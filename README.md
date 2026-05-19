@@ -1,55 +1,33 @@
 # 🏀 NBA Stats DB
-<div align="center">
-https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white
-https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
-https://img.shields.io/badge/status-conclu%C3%ADdo-1D9E75?style=for-the-badge
 
 Projeto de portfólio para estudo de SQL com dados da NBA.
-Banco de dados SQLite com times, jogadores, partidas e estatísticas.
-
+Banco de dados relacional da NBA construído do zero com SQLite e Python.
+Do SELECT básico até CTEs, subqueries e views — tudo com dados reais.
 </div>
 
-## 📁 Estrutura
+💡 Sobre o projeto
 
-```
-nba-stats-db/
-├── schema.sql          ← criação das tabelas
-├── seed.py             ← popula o banco com dados de exemplo
-├── nba_stats.db        ← banco gerado (após rodar seed.py)
-├── queries/
-│   ├── basico.sql      ← SELECT, WHERE, ORDER BY, LIMIT
-│   ├── intermediario.sql ← JOINs, GROUP BY, agregações
-│   └── avancado.sql    ← CTEs, subqueries, VIEWS
-└── README.md
-```
+Iniciei este projeto com o intuito em desenvolver e me aprofundar conhecimentos em SQL e modelagem de banco de dados relacional, usando a NBA como tema por eu gostar muito de basquete — além disso, pensei na possibilidade de ter uma das estruturas de dados legais para entender e aprender: times, jogadores, partidas e estatísticas e como elas podem se conectar e relacionar.
+O banco foi construído do zero: modelagem das tabelas, script de seed em Python com dados reais e queries progressivas organizadas por nível de complexidade.
 
-## 🚀 Como rodar
 
-**Pré-requisitos:** Python 3.x instalado
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/nba-stats-db.git
-cd nba-stats-db
-
-# 2. Gere o banco de dados
-python seed.py
-
-# 3. Abra com DB Browser for SQLite (recomendado)
-# Ou use a linha de comando:
-sqlite3 nba_stats.db
-```
 
 ## 🗄️ Modelo de Dados
 
-```
-times ──────────────── jogadores
-  │                        │
-  │                        │
-partidas ────────── estatisticas
-  │
-temporadas
-```
+┌──────────┐        ┌────────────┐
+│  times   │◄───────│  jogadores │
+└──────────┘        └─────┬──────┘
+     │                    │
+     │              ┌─────▼──────┐
+     ▼              │estatisticas│
+┌──────────┐        └─────┬──────┘
+│ partidas │◄─────────────┘
+└──────────┘
+     ▲
+     │
+┌────┴─────┐
+│temporadas│
+└──────────┘
 
 | Tabela | Descrição |
 |--------|-----------|
@@ -76,7 +54,7 @@ ORDER BY total_pontos DESC
 LIMIT 5;
 ```
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias & Ferramentas
 
 - SQLite 3
 - Python 3 (sqlite3)
