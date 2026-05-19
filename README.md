@@ -1,4 +1,8 @@
 # 🏀 NBA Stats DB
+<div align="center">
+https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white
+https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+https://img.shields.io/badge/status-conclu%C3%ADdo-1D9E75?style=for-the-badge
 
 Projeto de portfólio para estudo de SQL com dados da NBA.
 Banco de dados SQLite com times, jogadores, partidas e estatísticas.
