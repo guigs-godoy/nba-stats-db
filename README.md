@@ -7,6 +7,8 @@ https://img.shields.io/badge/status-conclu%C3%ADdo-1D9E75?style=for-the-badge
 Projeto de portfólio para estudo de SQL com dados da NBA.
 Banco de dados SQLite com times, jogadores, partidas e estatísticas.
 
+</div>
+
 ## 📁 Estrutura
 
 ```
