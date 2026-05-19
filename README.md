@@ -195,5 +195,4 @@ ORDER BY triplos_duplos DESC, duplos_duplos DESC;
 ---
 
 <div align="center">
-  Feito por <a href="https://github.com/guigs-godoy"><strong>Guilherme Godoy</strong></a>
 </div>
